@@ -1,0 +1,39 @@
+ext {
+    supportLibrary = "27.0.2"
+    androidx = "1.0.0"
+    supportv4 = "androidx.legacy:legacy-support-v4:${androidx}"
+    supportDependencies = [
+            supportv4   : "androidx.legacy:legacy-support-v4:${androidx}",
+            cardview    : "androidx.cardview:cardview:${androidx}",
+            appCompat   : "androidx.appcompat:appcompat:${androidx}",
+            recyclerview: "androidx.recyclerview:recyclerview:${androidx}",
+            annotations : "androidx.annotation:annotation:${androidx}",
+            design      : "com.google.android.material:material:${androidx}",            //1.0.0-rc01
+            constraint  : "androidx.constraintlayout:constraintlayout:1.1.2",
+            /*分包*/
+            multidex    : "androidx.multidex:multidex:2.0.0",
+    ]
+
+    /**
+     * ===============添加第三方依赖时，一定要把混淆添加到相关的配置文件中================
+     */
+    thirdDependencies = [
+
+            kotlin: "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlin_version}",
+            anko  : "org.jetbrains.anko:anko-common:${anko_version}"
+
+    ]
+
+
+    app = [
+            compileSdkVersion  : 28,
+            buildToolsVersion  : "28.0.2",
+            minSdkVersion      : 19,
+            targetSdkVersion   : 28,
+            versionCode        : 100,
+            versionName        : "1.0.0",
+            applicationId      : "com.xiaodong.kotlindemos",
+            targetCompatibility: 1.8,
+            sourceCompatibility: 1.8,
+    ]
+}

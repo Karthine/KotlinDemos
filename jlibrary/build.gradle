@@ -1,20 +1,16 @@
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
 
 android {
-    compileSdkVersion 28
-
-
-
+    compileSdkVersion app.compileSdkVersion
     defaultConfig {
-        minSdkVersion 15
-        targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
-
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
+        minSdkVersion app.minSdkVersion
+        targetSdkVersion app.targetSdkVersion
+        versionCode app.versionCode
+        versionName app.versionName
     }
-
     buildTypes {
         release {
             minifyEnabled false
@@ -27,8 +23,19 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation 'com.android.support:appcompat-v7:28.0.0'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    /*support库*/
+    api supportDependencies.supportv4
+    api supportDependencies.cardview
+    api supportDependencies.appCompat
+    api supportDependencies.recyclerview
+    api supportDependencies.annotations
+    api supportDependencies.design
+    api supportDependencies.constraint
+    api supportDependencies.multidex
+    api supportDependencies.supportv4
+
+    /*第三方库*/
+    api thirdDependencies.kotlin
+    api thirdDependencies.anko
+
 }
