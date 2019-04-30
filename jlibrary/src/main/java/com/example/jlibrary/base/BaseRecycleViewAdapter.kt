@@ -30,9 +30,7 @@ open class BaseRecycleViewAdapter<out T>(val mContext: Context, val list: List<A
 
 
     init {
-        if (list != null) {
-            mData.addAll(list)
-        }
+        mData.addAll(list)
         registerAdapterDataObserver(myDataObserver)
     }
 
@@ -60,7 +58,7 @@ open class BaseRecycleViewAdapter<out T>(val mContext: Context, val list: List<A
     }
 
     override fun getItemCount(): Int {
-        return mData?.size + mDefaultCount.size
+        return mData.size + mDefaultCount.size
     }
 
     override fun onBindViewHolder(holder: BaseViewHold<Any>, position: Int) {
@@ -88,7 +86,7 @@ open class BaseRecycleViewAdapter<out T>(val mContext: Context, val list: List<A
     }
 
     private fun showPage(resourceId: Int) {
-        prePosition = mData?.size
+        prePosition = mData.size
         mDefaultCount[resourceId] = prePosition
         notifyDataSetChanged()
     }

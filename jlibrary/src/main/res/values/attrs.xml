@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--常用按钮样式-->
+    <declare-styleable name="JButton">
+        <attr name="button_mode" format="integer"></attr>
+    </declare-styleable>
+
+</resources>
