@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.jlibrary.bean.BeanWraper
 import com.xiaodong.kotlindemos.adapter.MainListAdapter
+import com.xiaodong.kotlindemos.basic.BasicGrammarActivity
 import com.xiaodong.kotlindemos.utils.FormatMockDataUtils
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -32,7 +33,7 @@ class MainActivity : AppCompatActivity() {
                 val beanWraper = mList[position]
                 var intent: Intent? = null
                 when (beanWraper.name) {
-                    "Kotlin Demo One" -> intent = Intent(this@MainActivity, Basic::class.java)
+                    "Kotlin Demo One" -> intent = Intent(this@MainActivity, BasicGrammarActivity::class.java)
                 }
                 startActivity(intent)
             }
