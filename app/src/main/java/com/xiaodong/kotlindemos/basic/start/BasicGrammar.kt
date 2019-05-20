@@ -249,7 +249,7 @@ class BasicGrammar {
         }
         //使 ⽤ in 运算符来判断集合内是否包含某实例：
 
-        //使⽤ lambda 表达式来过滤（:lter）与映射（map）集合：
+        //使⽤ lambda 表达式来过滤（filter）与映射（map）集合：
         val fruits = listOf("banana", "avocado", "apple", "kiwifruit")
         fruits.filter { it.startsWith("a") }
                 .sortedBy { it }
